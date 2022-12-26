@@ -15,7 +15,7 @@ public class Sound {
 	public static void reproducir() {
 		try {
 			//Solo funciona con archivos .wav
-	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/back1.wav").getAbsoluteFile());
+	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("./back1.wav").getAbsoluteFile());
 	        clip = AudioSystem.getClip();
 	        clip.open(audioInputStream);
 	        
