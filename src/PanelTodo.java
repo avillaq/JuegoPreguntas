@@ -246,7 +246,7 @@ public class PanelTodo extends JPanel implements Comandos {
 			} else if (e.getSource() == BotonScore) {//Oculta el menu principal y hace visible el panel de score
 				// Abrimos el archivo Scores.txt y añadimos cada linea al ArrayList puntos
 				try {
-					Scanner archivoScore = new Scanner(new FileReader("src/Scores.txt"));
+					Scanner archivoScore = new Scanner(new FileReader("./Scores.txt"));
 					puntos = new ArrayList<String>();
 					while (archivoScore.hasNextLine())
 						puntos.add(archivoScore.nextLine());
@@ -329,7 +329,7 @@ public class PanelTodo extends JPanel implements Comandos {
 							
 							//Capturamos el puntaje del ganador y imprimimos en el archivo Scores.txt
 							try {
-								archivoScore = new PrintWriter(new FileWriter("src/Scores.txt", true));
+								archivoScore = new PrintWriter(new FileWriter("./Scores.txt", true));
 								archivoScore.println(String.valueOf(score1)+"p1");	//Formato: (puntaje obtenido)(abreviatura del ganador)
 								archivoScore.close();
 							} catch (IOException e1) {
@@ -379,7 +379,7 @@ public class PanelTodo extends JPanel implements Comandos {
 						
 						//Capturamos el puntaje del ganador
 						try {
-							archivoScore = new PrintWriter(new FileWriter("src/Scores.txt", true));
+							archivoScore = new PrintWriter(new FileWriter("./Scores.txt", true));
 							archivoScore.println(String.valueOf(score2)+"p2");
 							archivoScore.close();
 						} catch (IOException e1) {
